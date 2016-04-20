@@ -1,31 +1,21 @@
-# Database   Drill Address Book Schema 
+# Schema Design: Address Book
  
-##Learning Competencies 
-
-* Design database schema from problem data
-* Model a many-to-many relationship in a relational database
-
-##Summary 
-
- How would you create a schema for an Address Book?
-
-Requirements:
-
-1. A contact has a first name, last name, company, phone number, and an email address
-2. A group has a name
-3. A contact can belong to many groups, and a group has many contacts
+## Summary 
+We're going to design a schema for an address book application.  We won't design our schema based on provided Ruby classes.  Instead, we'll base our design on the desired functionality of the address book application.
 
 
-##Releases
+## Releases
+### Release 0: Contacts
+First things, first: if we're going to have an address book, we need to be able to store contacts.  Each contact has a first name, last name, phone number, and an e-mail address.
 
-###Release 0 : Design schema
+Create a schema that would allow us to store data for contacts.  Use the [schema designer].
 
-Design a database schema for an address book with the above requirements.
 
-Use [SQL Designer][] to create your schema.  When you are done, save the XML of your schema and copy it to the source file `address_book_schema.md`. Then, take a screenshot of your final schema design, and upload it using a free image-upload service like [Min.us](http://minus.com).  Paste the URL of the screenshot into your file (before your XML code). 
+### Release 1: Groups
+Our application needs a better way of organizing contacts than having one long list: we need to support groups.  Each group has a name.  Any number of contacts can be associated with the same group.  And at the same time, any one contact can be associated with multiple groups.  What's the relationship type between contacts and groups?
 
-<!-- ##Optimize Your Learning  -->
+Update the schema to support groups.  When our schema is complete, take a screenshot of the design and commit it.
 
-##Resources
 
-* [SQL Designer](https://socrates.devbootcamp.com//sql.html)
+
+[schema Designer]: https://schemadesigner.devbootcamp.com/
